@@ -7,4 +7,4 @@ In early 2007 I invented the "Uhoo Traveler Algorithm" as a part of my Master's 
 
 ## Literature
 
-See in `paper` directory a proposal of how this is to be used.
+See in `paper` directory a proposal of how this is to be used, in preparation of a new publication on this concept and its application.
