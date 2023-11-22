@@ -1,0 +1,66 @@
+Copyright 2007 - 2023 cartheur -- all rights reserved
+Uhoo Walker-Constructor
+
+--Task--
+We observe the result of three agents as they perform their work of constructing an object.
+
+BEGIN
+
+Pick an arbitrary point on the Einsteinian space-time manifold, call it (0,0), and run a Cartesian grid in four directions with each ray trajectory 90 degrees from its left and right nearest neighbor in 2 dimensions. Label one axis 'x' and name the other axis firstly encountered in a counterclockwise rotation 'y'.
+
+Create three agents who are programmed identically and whose task is to walk, mark, and remember.  Between them, they hold two elastic strings.  Start each at (0,0): one agent (1) walks five units in the positive y direction; two agents walk five units in the negative y direction and walk 90 degrees from their path in opposite directions: (2) in the negative x direction 5 units and (3) in the x direction 5 units.
+
+Remember your location on the grid.
+
+-----**PROGRAM OPERATION [STORE IN DATATABLES]
+
+Store grid values of 1,2,3 into tables.  Column 'x' and column 'y'.
+
+[g1:x,y, g2:x,y, g3:x,y]
+
+Store the distance, d1,d2,d3, walked in the following tables:
+
+[d1, d2, d3]; [d4, d5, d6]
+
+Calculate the distance between 1 and 2, 1 and 3 by subtracting the unknown length by coordinate value 'u'.  Distance g23 is known.
+
+[g12:u, g13:u, *g23:u, g46:u, g45:u, g56:u]
+
+Round the distance, if necessary, to a maximum of five decimal places.
+
+Store grid values of 4,5,6 into tables.  Column 'x' and column 'y'.
+
+[g4:x,y, g5:x,y, g6:x,y]
+
+-----**END OF OPERATION
+
+Draw tight the first elastic string and pin to the edge points (1,2,3). This is the first polygon of three vertices.
+
+Scribe circles with a diameter of 2 units filled with quantity 'theta' centered on vertices 2 and 3.
+
+1: cast a ray that intersects point 'a' continuing to twice the distance walked and mark the edge point '4'. Save the distance (d4).
+
+2: Walk in the +y direction along the string to the grid coordinate (2.5,0) and mark the point 'c'. Return to your previous location.
+
+3: Walk in the +y direction along the string to the grid coordinate (-2.5,0) and mark the point 'b'. Return to your previous location.
+
+2: cast a ray that intersects the point 'c' continuing the ray to twice the distance traveled and mark the edge point '5'. Save the distance (d5).
+
+3: cast a ray that intersects the point 'b' continuing the ray to twice the distance traveled and mark the edge point '6'. Save the distance (d6).
+
+Draw tight the second elastic string and pin to the edge points (4,5,6). This is the second polygon of three vertices.
+
+Mark the intersection of the three rays as the center of mass of the triangle centroid as point 'm'.
+
+This is the Uhoo Carpet.
+
+-----**DATATABLES
+
+Dataspace_Addresses[i, j, k]
+Dataspace_Resolution[unit(i),unit(j)]
+Access_Point[p]
+
+-----**END
+
+
+END
